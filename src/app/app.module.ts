@@ -11,10 +11,14 @@ import { provideDatabase,getDatabase,  } from '@angular/fire/database';
 import { AngularFireModule} from '@angular/fire/compat'
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { list } from '@angular/fire/database';
+import { InvoicesComponent } from './Components/invoices/invoices.component';
+import { ViewInvoiceComponent } from './Components/view-invoice/view-invoice.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    InvoicesComponent,
+    ViewInvoiceComponent
   ],
   imports: [
     BrowserModule,
