@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "invoice-app-7e343": {
+      "hosting": {
+        "invoice-app": [
+          "invoice-app-7e343"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "invoice-app-7e343"
+  }
+}
