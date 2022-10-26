@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from 'src/app/Services/data.service';
 
 @Component({
   selector: 'app-invoices',
@@ -6,10 +7,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./invoices.component.css']
 })
 export class InvoicesComponent implements OnInit {
-
-  constructor() { }
+  Invoices: any;
+  constructor(private data: DataService) { }
 
   ngOnInit(): void {
-  }
 
-}
+    this.Invoices = this.OnReload();
+
+   }
+  
+
+
+
+    OnReload(){
+      console.log("UAHFDS")
+        return this.data.getAllData().subscribe((data) =>{
+          console.log(data)
+        });
+   }
+
+  }
