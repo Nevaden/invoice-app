@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+Body{
+    --navBackgroundColor: #373B53;
+    
+    --textColor: #888EB0;
+    --boldTextColor: #0C0E16;
+    --tertiaryColor: #7E88C3;
+}
+    
+
+Body.DarkTheme{
+    --navBackgroundColor:#1E2139;
+
+    --textColor: #DFE3FA;
+    --boldTextColor: #FFFFFF;
+    --tertiaryColor: #DFE3FA;
+}
+
+
+Body div{
+    background-color: var(--navBackgroundColor);
+}
+
+Body.DarkTheme div{
+    background-color: var(--navBackgroundColor);
+}
