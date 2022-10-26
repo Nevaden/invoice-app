@@ -23,6 +23,7 @@ import { ViewInvoiceComponent } from './Components/view-invoice/view-invoice.com
   imports: [
     BrowserModule,
     AppRoutingModule,
+    AngularFireDatabaseModule,
     StoreModule.forRoot({}, {}),
     EffectsModule.forRoot([]),
     provideFirebaseApp(() => initializeApp(environment.firebase)),
@@ -35,5 +36,5 @@ export class AppModule { }
 
 
 // Initialize Firebase
-// const app = initializeApp(firebaseConfig);
+//  const app = initializeApp(environment.firebase);
 
