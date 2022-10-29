@@ -12,18 +12,12 @@ export class InvoicesComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.Invoices = this.OnReload();
+  
 
    }
   
 
 
 
-    OnReload(){
-      console.log("UAHFDS")
-        return this.data.getAllData().subscribe((data) =>{
-          console.log(data)
-        });
-   }
-
+ 
   }
