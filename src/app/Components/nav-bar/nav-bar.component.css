@@ -81,6 +81,51 @@
     width: 1px;
 }
 
-.avatarImage{
+@media screen and (min-width: 768px) {
+    .NavBar{
+        height: 80px;
+    }
+    .logoContainer{
+        height: 80px;
+        width: 80px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .NavBar{
+        flex-direction: column;
+        width: 103px;
+        height: 100vh;
+        position: absolute;
+        border-radius: 0px 20px 20px 0px;
+    }
+
+    .logoContainer{
+        height: 103px;
+        width: 103px;
+    }
+
+    .itemContainer{
+        flex-direction: column;
+    }
+    .navItem{
+        margin-right: 0px;
+        margin-bottom: 24px;
+    }
+    .line{
+        width: 103px;
+        height: 1px;
+    }
+
+    .avatarImage{
+        height: 40px;
+        width: 40px;
+    }
+
+    .celestialBody{
+        margin-bottom: 32px;
+    }
+
 
 }
+
