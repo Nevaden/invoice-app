@@ -1,2 +1,14 @@
-<p>nav-bar works!</p>
-<button (click)="ToggleDarkTheme()"></button>
+<nav class="NavBar">
+    <div class="logoContainer">
+        <div class="color1"></div>
+        <div class="color2"></div>
+        <div class="Logo"></div>
+        
+    </div>
+    
+    <div class="itemContainer">
+        <div class="celestialBody navItem" id="themeIcon" (click)="ToggleDarkTheme()"></div>
+        <div class="line navItem"></div>
+        <div class="avatarImage navItem"></div>
+    </div>
+</nav>
