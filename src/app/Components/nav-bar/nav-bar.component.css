@@ -96,7 +96,7 @@
         flex-direction: column;
         width: 103px;
         height: 100vh;
-        position: absolute;
+        position: fixed;
         border-radius: 0px 20px 20px 0px;
     }
 
