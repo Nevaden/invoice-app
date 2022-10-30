@@ -1,2 +1,10 @@
 
+<button routerLink="/view-invoice/hthth"></button>
+
+<section>
+    <article *ngFor="let invoice of (allInvoices$ | async)">
+        <p>{{invoice.clientName}}</p>
+        <p routerLink="/view-invoice/{{invoice.id}}">{{invoice.id}}</p>
+    </article>
+</section>
 

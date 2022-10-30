@@ -10,8 +10,10 @@ import { DataService } from './Services/data.service';
 import { HttpClientModule } from '@angular/common/http';
 import { NavBarComponent } from './Components/nav-bar/nav-bar.component';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { reducer } from './store/reducers/invoices.reducer';
-import { Invoices } from './store/effects/invoices'
+import { InvoicesReducer } from './store/reducers/invoices.reducer';
+import { Invoices } from './store/effects/invoices';
+import { NavigationActionTiming, routerReducer, StoreRouterConnectingModule } from '@ngrx/router-store'
+
 
 @NgModule({
   declarations: [
@@ -24,9 +26,10 @@ import { Invoices } from './store/effects/invoices'
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    StoreModule.forRoot({invoiceReducer: reducer}, {}),
+    StoreModule.forRoot({invoices: InvoicesReducer, route: routerReducer, }, {}),
     StoreDevtoolsModule.instrument(),
-    EffectsModule.forRoot([Invoices])
+    EffectsModule.forRoot([Invoices]),
+    StoreRouterConnectingModule.forRoot({navigationActionTiming: NavigationActionTiming.PostActivation,})
   ],
   providers: [DataService, Store],
   bootstrap: [AppComponent]

@@ -16,6 +16,7 @@ export class DataService {
 
   getAllData(): Observable<any>{
     this.URL = `${this.firebaseURL}${this.JSON}`
+
     return this.http.get(this.URL);
   }
 
