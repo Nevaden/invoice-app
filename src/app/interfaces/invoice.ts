@@ -10,6 +10,7 @@ export interface Invoice {
     clientName: string;
     createdAt: string;
     description: string;
+    firebaseId: string;
     id: string;
     items: object[];
     paymentDue: string;
