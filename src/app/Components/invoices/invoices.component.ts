@@ -15,7 +15,12 @@ export class InvoicesComponent implements OnInit {
 
   allInvoices$ = this.store.select(allInvoices)
 
+  
   ngOnInit(): void {
+    
    }
   
+   createNewInvoice(){
+  
+   }
   }

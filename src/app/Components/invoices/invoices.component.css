@@ -1,3 +1,173 @@
-p{
+
+
+.invoicesHeader{
+    display: flex;
+    margin-left: 24px;
+    margin-right: 24px;
+    margin-top: 34px;
+    margin-bottom: 32px;
+    align-items: center;
+    justify-content: space-between;
+}
+.invoicesText{
+    color: var(--boldTextColor);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 22px;
+    letter-spacing: -0.625px;
+}
+ .invoiceCountText{
     color: var(--textColor);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+ }
+
+.filterNew{
+    display: flex ;
+}
+
+.filterSelect{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    margin-right: 18px;
+}
+
+.smallFilter{
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: right;
+    letter-spacing: -0.25px;
+    margin-right: 12px;
+}
+.filterArrow{
+    width: 12.46px;
+    height: 7.23px;
+}
+
+.largeFilter{
+    display: none;
+}
+
+.newInvoiceBtn{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: #7C5DFA;
+    border-radius: 24px;
+    width: 90px;
+    height: 44px;
+}
+
+.newInvoiceSymbol{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 32px;
+    width: 32px;
+    background: #FFFFFF;
+    border-radius: 50%;
+ 
+
+}
+
+.newInvoiceText{
+    color: #FFFFFF;
+    margin-right: 4px;
+}
+
+.invoicesLarge{
+    display: none;    
+}
+
+.invoicesSmall{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.singleInvoice{
+    width: 327px;
+    height: 134px;
+    background-color: var(--cardBackgroundColor);
+    margin-bottom: 16px;
+    border-radius: 8px;
+    box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+
+.idName{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 24px;
+    margin-right: 24px;
+    margin-top: 24px;
+}
+
+.invoiceID{
+    display: flex;
+    color: var(--boldTextColor)
+}
+
+.invoiceID p{
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+    color: #7E88C3; 
+}
+
+.clientName{
+    color: var(--secondaryTextColor);
+}
+
+
+.dateTotalStatus{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 24px;
+    margin-right: 24px;
+}
+
+.dueDate{
+    color: var(--tertiaryColor);
+}
+
+.total{
+    color: var(--boldTextColor);
+    margin-bottom: 24px;
+    letter-spacing: -0.8px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.total::first-letter {
+    padding-right: 0.3em;
+  }
+
+.statusContainer{
+    width: 104px;
+    height: 40px;
+    mix-blend-mode: normal;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.statusCircle{
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
 }
