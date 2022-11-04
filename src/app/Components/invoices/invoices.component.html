@@ -1,57 +1,57 @@
 
 
-
-<section class="invoicesHeader">
-    <div class="invoicesCount">
-        <h2 class="invoicesText">Invoices</h2>
-        <div *ngIf="(allInvoices$ | async)?.length == 0; else loading">
-            <p class="invoiceCountText">No invoices</p>
-        </div>
-        
-        <ng-template #loading>
-            <p class="invoiceCountText">{{ (allInvoices$ | async)?.length }} invoices</p> 
-        </ng-template>
-    </div>
-    <div class="filterNew">
-        <div class="filterSelect">
-            <p class="smallFilter">Filter</p>
-            <p class="largeFilter">Filter by Status</p>
-            <img class="filterArrow" src="../../../assets/icon-arrow-down.svg" alt="down-arrow">
-        </div>
-
-        <div class="newInvoiceBtn">
-            <div class="newInvoiceSymbol">
-                <img class="newInvoicePlus" src="../../../assets/icon-plus.svg" alt="New Invoice Plus Icon">
+<div class="invoicesContiner">
+    <section class="invoicesHeader">
+        <div class="invoicesCount">
+            <h2 class="invoicesText">Invoices</h2>
+            <div *ngIf="(allInvoices$ | async)?.length == 0; else loading">
+                <p class="invoiceCountText">No invoices</p>
             </div>
-            <p class="newInvoiceText">New</p>
+            
+            <ng-template #loading>
+                <p class="invoiceCountText">{{ (allInvoices$ | async)?.length }} invoices</p> 
+            </ng-template>
         </div>
-    </div>
-</section>
-
-<section class="invoicesSmall">
-    <article class="singleInvoice" *ngFor="let invoice of (allInvoices$ | async)" routerLink="/view-invoice/{{invoice.id}}">
-
-            <div class="idName">
-                <h4 class="invoiceID"><p>#</p>{{invoice.id}}</h4>
-                <h4 class="clientName">{{invoice.clientName}}</h4>
+        <div class="filterNew">
+            <div class="filterSelect">
+                <p class="smallFilter">Filter</p>
+                <p class="largeFilter">Filter by Status</p>
+                <img class="filterArrow" src="../../../assets/icon-arrow-down.svg" alt="down-arrow">
             </div>
-            <div class="dateTotalStatus">
-                <div class="dueDateTotal">
-                    <h4 class="dueDate">Due {{invoice.paymentDue}}</h4>
-                    <h4 class="total">{{invoice.total | currency:'GBP':'symbol'}}</h4>
+
+            <div class="newInvoiceBtn">
+                <div class="newInvoiceSymbol">
+                    <img class="newInvoicePlus" src="../../../assets/icon-plus.svg" alt="New Invoice Plus Icon">
                 </div>
-                <div class="statusContainer" [ngStyle]="{'background': (invoice.status === 'paid') ? 'rgba(51, 214, 160, 0.06)' : (invoice.status === 'pending') ? 'rgba(255, 145, 0, 0.06)' : (invoice.status === 'draft') ? 'rgba(55, 59, 83, 0.06)' : ''}">
-
-                    <div class="statusCircle" [ngStyle]="{'background': (invoice.status === 'paid') ? '#33D69F' : (invoice.status === 'pending') ? '#FF8F00' : (invoice.status === 'draft') ? '#373B53' : ''}" ></div>
-                    <p class="status" [ngStyle]="{'color': (invoice.status === 'paid') ? '#33D69F' : (invoice.status === 'pending') ? '#FF8F00' : (invoice.status === 'draft') ? '#373B53' : ''}">{{invoice.status | titlecase}}</p>
-                    
-                </div>
+                <p class="newInvoiceText">New</p>
             </div>
+        </div>
+    </section>
 
-    </article>
-</section>
+    <section class="invoicesSmall">
+        <article class="singleInvoice" *ngFor="let invoice of (allInvoices$ | async)" routerLink="/view-invoice/{{invoice.id}}">
+                
+                    <div class="idName">
+                        <h4 class="invoiceID"><p>#</p>{{invoice.id}}</h4>
+                        <h4 class="clientName">{{invoice.clientName}}</h4>
+                    </div>
+                    <div class="dateTotalStatus">
+                        <div class="dueDateTotal">
+                            <h4 class="dueDate">Due {{invoice.paymentDue}}</h4>
+                            <h4 class="total">{{invoice.total | currency:'GBP':'symbol'}}</h4>
+                        </div>
+                        <div class="statusContainer" [ngStyle]="{'background': (invoice.status === 'paid') ? 'rgba(51, 214, 160, 0.06)' : (invoice.status === 'pending') ? 'rgba(255, 145, 0, 0.06)' : (invoice.status === 'draft') ? 'rgba(55, 59, 83, 0.06)' : ''}">
 
-<section class="invoicesLarge">
+                            <div class="statusCircle" [ngStyle]="{'background': (invoice.status === 'paid') ? '#33D69F' : (invoice.status === 'pending') ? '#FF8F00' : (invoice.status === 'draft') ? '#373B53' : ''}" ></div>
+                            <p class="status" [ngStyle]="{'color': (invoice.status === 'paid') ? '#33D69F' : (invoice.status === 'pending') ? '#FF8F00' : (invoice.status === 'draft') ? '#373B53' : ''}">{{invoice.status | titlecase}}</p>
+                            
+                        </div>
+                    </div>
+            
+        </article>
+    </section>
 
-</section>
+    <section class="invoicesLarge">
 
+    </section>
+</div>

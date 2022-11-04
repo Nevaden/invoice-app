@@ -1,4 +1,9 @@
-
+.invoicesContiner{
+    width: 98vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .invoicesHeader{
     display: flex;
@@ -8,6 +13,7 @@
     margin-bottom: 32px;
     align-items: center;
     justify-content: space-between;
+    width: 327px;
 }
 .invoicesText{
     color: var(--boldTextColor);
