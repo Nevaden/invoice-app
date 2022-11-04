@@ -2,9 +2,10 @@
 
 
 <section>
-    <article>
-        <p>{{invoice$ | async | json}}</p>
+    <article *ngFor="let item of (invoice$ | async)">
+        <p>{{item.id}}</p>
+        <p>{{item.clientName}}</p>
+        <p>{{item.status}}</p>
+        <p>{{item.firebaseId}}</p>
     </article>
 </section>
-
-<p>{{invoice$ | async}}</p>

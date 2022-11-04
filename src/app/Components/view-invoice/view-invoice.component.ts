@@ -14,7 +14,7 @@ export class ViewInvoiceComponent implements OnInit {
   invoice$: any;
   constructor(private store: Store, private route: ActivatedRoute) { }
   postTest = {
-    "id": "RT3080",
+    "id": "HD8273",
     "createdAt": "2021-08-18",
     "paymentDue": "2021-08-19",
     "description": "Re-branding",
