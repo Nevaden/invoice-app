@@ -11,7 +11,6 @@ export const allInvoices = createSelector(
             invoiceArray.push({ ...invoiceState[key], firebaseId: key });
         })
         invoiceArray.pop()
-      
         return invoiceArray
     }
 )
