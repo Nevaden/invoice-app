@@ -31,7 +31,8 @@ import { DatePipe } from './pipes/date.pipe'
     StoreModule.forRoot({invoices: InvoicesReducer, route: routerReducer, }, {}),
     StoreDevtoolsModule.instrument(),
     EffectsModule.forRoot([Invoices]),
-    StoreRouterConnectingModule.forRoot({navigationActionTiming: NavigationActionTiming.PostActivation,})
+    StoreRouterConnectingModule.forRoot({navigationActionTiming: NavigationActionTiming.PostActivation,}),
+    StoreModule.forRoot({}, {})
   ],
   providers: [DataService, Store],
   bootstrap: [AppComponent]
