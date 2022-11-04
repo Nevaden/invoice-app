@@ -12,7 +12,8 @@ import { NavBarComponent } from './Components/nav-bar/nav-bar.component';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { InvoicesReducer } from './store/reducers/invoices.reducer';
 import { Invoices } from './store/effects/invoices';
-import { NavigationActionTiming, routerReducer, StoreRouterConnectingModule } from '@ngrx/router-store'
+import { NavigationActionTiming, routerReducer, StoreRouterConnectingModule } from '@ngrx/router-store';
+import { DatePipe } from './pipes/date.pipe'
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { NavigationActionTiming, routerReducer, StoreRouterConnectingModule } fr
     AppComponent,
     InvoicesComponent,
     ViewInvoiceComponent,
-    NavBarComponent
+    NavBarComponent,
+    DatePipe
   ],
   imports: [
     BrowserModule,
