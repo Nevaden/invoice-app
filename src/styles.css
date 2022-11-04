@@ -6,17 +6,30 @@ font-family: 'League Spartan', sans-serif;
 }
 
 Body{
+    --backgroundColor: #F8F8FB;
     --navBackgroundColor: #373B53;
     --textColor: #888EB0;
     --boldTextColor: #0C0E16;
     --tertiaryColor: #7E88C3;
+    --cardBackgroundColor: #FFFFFF;
+    --secondaryTextColor: #858BB2;
 }
     
 
 Body.DarkTheme{
+    --backgroundColor: #141625;
     --navBackgroundColor:#1E2139;
     --textColor: #DFE3FA;
     --boldTextColor: #FFFFFF;
     --tertiaryColor: #DFE3FA;
+    --cardBackgroundColor:#1E2139;
+    --secondaryTextColor: #FFFFFF;
 }
 
+body{
+    background-color: var(--backgroundColor);
+}
+
+body.DarkTheme{
+    background-color: var(--backgroundColor);
+}
