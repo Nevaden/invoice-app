@@ -30,7 +30,6 @@
 
     <section class="invoicesSmall">
         <article class="singleInvoice" *ngFor="let invoice of (allInvoices$ | async)" routerLink="/view-invoice/{{invoice.id}}">
-                
                     <div class="idName">
                         <h4 class="invoiceID"><p>#</p>{{invoice.id}}</h4>
                         <h4 class="clientName">{{invoice.clientName}}</h4>
@@ -50,6 +49,7 @@
             
         </article>
     </section>
+    <button (click)="createNewInvoice()">CREATE INVOICE</button>
 
     <section class="invoicesLarge">
 

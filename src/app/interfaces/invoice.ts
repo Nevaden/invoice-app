@@ -5,7 +5,7 @@ export interface Invoice {
         country: string;
         postCode: string;
         street: string;
-    }
+    },
     clientEmail: string;
     clientName: string;
     createdAt: string;
@@ -20,7 +20,7 @@ export interface Invoice {
         country: string;
         postCode: string;
         street: string;
-    }
+    },
     status: string;
     total: number;
 }

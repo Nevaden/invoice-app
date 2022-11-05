@@ -36,9 +36,15 @@ export const selectInvoice = createSelector(
         const invoiceArray: Invoice[] = [];
         Object.keys(invoiceState).forEach((invoice: any) => {
          if(invoiceState[invoice].id == id){
-            invoiceArray.push({...invoiceState[invoice], firebaseId: invoice})  
+          
+          if(invoiceState[invoice].firebaseId == ''){
+            invoiceArray.push({ ...invoiceState[invoice], firebaseId: invoice });
+          } else {
+            invoiceArray.push({ ...invoiceState[invoice] });
+          }
          }
         })   
+        // console.log(invoiceArray, "selector")
         return invoiceArray
     }
 )

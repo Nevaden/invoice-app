@@ -14,7 +14,7 @@ import { InvoicesReducer } from './store/reducers/invoices.reducer';
 import { Invoices } from './store/effects/invoices';
 import { NavigationActionTiming, routerReducer, StoreRouterConnectingModule } from '@ngrx/router-store';
 import { DatePipe } from './pipes/date.pipe';
-import { environment } from '../environments/environment'
+import { environment } from '../environments/environment';
 
 
 @NgModule({
@@ -30,10 +30,8 @@ import { environment } from '../environments/environment'
     AppRoutingModule,
     HttpClientModule,
     StoreModule.forRoot({invoices: InvoicesReducer, route: routerReducer, }, {}),
-    StoreDevtoolsModule.instrument(),
     EffectsModule.forRoot([Invoices]),
     StoreRouterConnectingModule.forRoot({navigationActionTiming: NavigationActionTiming.PostActivation,}),
-    StoreModule.forRoot({}, {}),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production })
   ],
   providers: [DataService, Store],
