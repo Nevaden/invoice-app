@@ -1,15 +1,18 @@
 <button routerLink="/invoices"></button>
-
+<button (click)="onEdit()">EDIT</button>
 
 <section *ngFor="let item of (invoice$ | async)">
     <button (click)="deleteCurrentInvoice()" id="{{item.firebaseId}} " class="delete" routerLink="/invoices">DELETE  {{item.firebaseId}}</button>
     
-    <article>
+    <!-- <article>
         <p>{{item.id}}</p>
         <p>{{item.clientName}}</p>
         <p>{{item.status}}</p>
         <p>{{item.firebaseId}}</p>
-    </article>
+        <input type="text" value="{{item.id}}">
+    </article> -->
+
+
 </section>
 
 

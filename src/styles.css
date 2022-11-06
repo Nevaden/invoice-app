@@ -13,6 +13,14 @@ Body{
     --tertiaryColor: #7E88C3;
     --cardBackgroundColor: #FFFFFF;
     --secondaryTextColor: #858BB2;
+    --offCanvasBackground: #FFFFFF;
+    --inputBorderColor:  #DFE3FA;
+    --selectColor: #0C0E16;
+    --addItemBackgroundColor: #F9FAFE;
+
+    --discardButtonBackgroundColor:#F9FAFE;
+    --saveAsDraftColor: #888EB0;
+
 }
     
 
@@ -24,7 +32,13 @@ Body.DarkTheme{
     --tertiaryColor: #DFE3FA;
     --cardBackgroundColor:#1E2139;
     --secondaryTextColor: #FFFFFF;
-}
+    --offCanvasBackground: #141625;
+    --inputBorderColor:#252945;
+    --selectColor: #DFE3FA;
+    --addItemBackgroundColor: #252945;
+    --discardButtonBackgroundColor:#252945;;
+    --saveAsDraftColor:#DFE3FA;
+}   
 
 body{
     background-color: var(--backgroundColor);
@@ -32,4 +46,5 @@ body{
 
 body.DarkTheme{
     background-color: var(--backgroundColor);
+    
 }

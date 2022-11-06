@@ -50,6 +50,7 @@
     text-align: right;
     letter-spacing: -0.25px;
     margin-right: 12px;
+    color: var(--boldTextColor);
 }
 .filterArrow{
     width: 12.46px;
@@ -58,6 +59,7 @@
 
 .largeFilter{
     display: none;
+    color: var(--boldTextColor);
 }
 
 .newInvoiceBtn{
@@ -176,4 +178,295 @@
     height: 8px;
     width: 8px;
     border-radius: 50%;
+}
+
+.noInvoicesSeciton{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.noInvoicesImage{
+    margin-top: 102px;
+    margin-bottom: 40px;
+    width: 193.07px;
+    height: 160px;
+}
+
+.noInvoicesBold{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 22px;
+    letter-spacing: -0.625px;
+    width: 218px;
+    text-align: center;
+    color: var(--boldTextColor)
+}
+
+.noInvoicesText{
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    letter-spacing: -0.25px;
+    width: 179px;
+    margin-top: 24px;
+    color: var(--textColor);
+}
+
+.noInvoicesText span{
+    font-weight: 700;
+}
+
+/* fgdfgdfgfdgkdfgklgdfkdgfl;kjfgdjkldfgkljdfgklj;dfgkl;j;kljdfgdgk;fjlgdfk;ljgdfkl;j */
+.offCanvas {
+    height: calc(100% - 72px);
+    width: 0px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    margin-top: 72px;
+    background-color: var(--offCanvasBackground);
+  }
+
+  .newInvoiceContent{
+    margin-top: 32px;
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+
+  .backButton{
+    display: flex;
+    justify-content: space-between;
+    width: 81px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .goBackArrow{
+    height: 14px;
+    position: relative;
+    left: -4px;
+  }
+
+  .goBackText{
+    color: var(--boldTextColor);
+  }
+
+  .offCanvasTitle{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.5px;
+    color: var(--boldTextColor);
+    margin-top: 24px;
+  }
+
+
+  .billSectionTitle{
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+    color: #7C5DFA;
+    margin-top: 24px;
+  }
+
+  .inputField {
+    border: 1px solid var(--inputBorderColor);
+    border-radius: 4px;
+    margin-top: 10px;
+  }
+
+  .inputField:focus {
+    outline: none !important;
+    border: 1px solid #9277FF;
+    /* box-shadow: 0 0 10px #719ECE; */
+    border-radius: 4px;
+  }
+
+  .bigInput{
+    width: 327px;
+    height: 48px;
+  }
+  input[type=text]{
+    padding-left: 20px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+    background-color: var(--cardBackgroundColor);
+    color: var(--boldTextColor)
+  }
+
+  input[type=date]{
+    padding-left: 20px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+    background-color: var(--cardBackgroundColor);
+    color: var(--boldTextColor)
+  }
+
+  input[type=number]{
+    padding-left: 20px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+    background-color: var(--cardBackgroundColor);
+    color: var(--boldTextColor)
+  }
+
+  .inputLabel{
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+    color: var(--tertiaryColor);
+    margin-top: 24px;
+  }
+
+  .InputContainer{
+    display: flex;
+    flex-direction: column;
+  }
+    .smallInputContainer{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .smallInput{
+        height: 48px;
+        width: 152px;
+        margin-right: 23px;
+    }
+
+select{
+    padding-left: 20px;
+    background-color: var(--cardBackgroundColor);
+    color: var(--boldTextColor);
+}
+select option{
+    background-color: var(--cardBackgroundColor);
+    color: var(--selectColor);
+}
+
+.itemListText{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: -0.375px;
+    color: #777F98;
+    margin-top: 66px;
+}
+
+
+.addNewItemButton{
+    border-radius: 24px;
+    width: 327px;
+    height: 48px;
+    border: none;
+    background-color: var(--addItemBackgroundColor);
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    letter-spacing: -0.25px;
+    color: #7E88C3;
+}
+
+.itemAmountsContainer{
+    display: flex;
+    position: relative;
+    margin-bottom: 48px;
+}
+
+.itemValues{
+    margin-right: 16px;
+}
+
+
+.qty{
+    width: 64px;
+    height: 48px;
+}
+
+.price{
+    width: 100px;
+    height: 48px;    
+}
+.totalPrice{
+    border: none;
+    margin-top: 24px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+    color: #888EB0;
+  
+}
+
+.deleteItem{
+    height: 16px;
+    position: absolute;
+    right: 6px;
+    bottom: 18px;
+}
+
+.styleGradient{
+    height: 64px;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.1) 100%);
+    margin-top: 24px;
+}
+
+.stateDecide{
+    height: 91px;
+    width: 100%;
+    background-color: var(--cardBackgroundColor);
+    box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
+    
+}
+
+.buttonsContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    height: 100%;
+}
+
+.discardBtn, .SaveAsDraft, .SaveSend{
+    height: 48px;
+    border-radius: 24px;
+    border: none;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+}
+
+.discardBtn{
+    width: 84px;
+    background-color: var(--discardButtonBackgroundColor);
+    color: var(--tertiaryColor)
+}
+
+.SaveAsDraft{
+    width: 117px;
+    background-color: #373B53;
+    color: var(--saveAsDraftColor)
+}
+
+.SaveSend{
+    width: 112px;
+    background: #7C5DFA;
+    color: #FFFFFF;
+
 }

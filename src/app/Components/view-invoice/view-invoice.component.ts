@@ -5,6 +5,7 @@ import { AddInvoice, DeleteInvoice } from 'src/app/store/actions/invoices.action
 import { getItemById, oneInvoice, selectInvoice } from 'src/app/store/selectors/invoice.selectors';
 import { selectRouteParams } from 'src/app/store/selectors/router.selectors';
 import { Invoice } from 'src/app/interfaces/invoice';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 
 @Component({
@@ -16,13 +17,16 @@ export class ViewInvoiceComponent implements OnInit {
   id: any;
   invoice$: any;
   firebaseId: any;
+
   
+
+
+
   constructor(private store: Store, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     const id = this.route.snapshot.params['id'];
     this.invoice$ = this.store.select(oneInvoice(id))
-
   }
 
 
@@ -32,4 +36,14 @@ export class ViewInvoiceComponent implements OnInit {
     this.store.dispatch(DeleteInvoice({payload: {...this.firebaseId}}));
   }
 
+  onEdit(){
+    // this.editForm.setValue({
+    //   clientName: "ghfg", 
+    //   id: "fghf"
+    // });
+  }
+
+  editPost(){
+
+  }
 }

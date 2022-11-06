@@ -15,7 +15,8 @@ import { Invoices } from './store/effects/invoices';
 import { NavigationActionTiming, routerReducer, StoreRouterConnectingModule } from '@ngrx/router-store';
 import { DatePipe } from './pipes/date.pipe';
 import { environment } from '../environments/environment';
-
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,8 @@ import { environment } from '../environments/environment';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
     StoreModule.forRoot({invoices: InvoicesReducer, route: routerReducer, }, {}),
     EffectsModule.forRoot([Invoices]),
     StoreRouterConnectingModule.forRoot({navigationActionTiming: NavigationActionTiming.PostActivation,}),
