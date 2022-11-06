@@ -4,18 +4,25 @@
     <section class="invoicesHeader">
         <div class="invoicesCount">
             <h2 class="invoicesText">Invoices</h2>
-            <div *ngIf="(allInvoices$ | async)?.length == 0; else loading">
+            <!-- (allInvoices$ | async)| status:filterContent:'status'" -->
+            <div *ngIf="(allInvoices$ | async | status:filterContent:'status').length===0; else loading">
                 <p class="invoiceCountText">No invoices</p>
             </div>
             
             <ng-template #loading>
-                <p class="invoiceCountText">{{ (allInvoices$ | async)?.length }} invoices</p> 
+                <p class="invoiceCountText">{{ (allInvoices$ | async | status:filterContent:'status').length }} invoices</p> 
             </ng-template>
         </div>
         <div class="filterNew">
-            <div class="filterSelect">
+            <div class="filterSelect" (click)="showCheckboxes()">
                 <p class="smallFilter">Filter</p>
-                <p class="largeFilter">Filter by Status</p>
+                <div id='checkboxes' multiple StopProagationDirective>
+                    <label class="statusItem" StopProagationDirective   for="draft"><input class="statusCheckbox" StopProagationDirective type="checkbox" id="draft" value='draft' (click)="updateFilter('draft')" checked>Draft</label>
+                    <label class="statusItem" StopProagationDirective   for="pending"><input class="statusCheckbox" StopProagationDirective type="checkbox" id="pending" value='pending' (click)="updateFilter('pending')" checked>Pending</label>
+                    <label class="statusItem" StopProagationDirective   for="paid"><input class="statusCheckbox" StopProagationDirective type="checkbox" id="paid" value='paid' (click)="updateFilter('paid')" checked>Paid</label>
+                </div>
+                <p class="largeFilter" (click)="showCheckboxes()">Filter by Status</p>
+
                 <img class="filterArrow" src="../../../assets/icon-arrow-down.svg" alt="down-arrow">
             </div>
 
@@ -29,7 +36,7 @@
     </section>
 
     <section class="invoicesSmall">
-        <article class="singleInvoice" *ngFor="let invoice of (allInvoices$ | async)" routerLink="/view-invoice/{{invoice.id}}">
+        <article class="singleInvoice" *ngFor="let invoice of (allInvoices$ | async)| status:filterContent:'status'" routerLink="/view-invoice/{{invoice.id}}">
                     <div class="idName">
                         <h4 class="invoiceID"><p>#</p>{{invoice.id}}</h4>
                         <h4 class="clientName">{{invoice.clientName}}</h4>
@@ -47,18 +54,17 @@
             
         </article>
     </section>
-    <button (click)="createNewInvoice()">CREATE INVOICE</button>
+    <!-- <button (click)="createNewInvoice()">CREATE INVOICE</button> -->
 
     <section class="invoicesLarge">
     </section>
 
-    <div class="noInvoicesSeciton" *ngIf="(allInvoices$ | async)?.length == 0">
+    <div class="noInvoicesSeciton" *ngIf="(allInvoices$ | async | status:filterContent:'status').length===0">
         <img class="noInvoicesImage" src="../../../assets/illustration-empty.svg" alt="No Inovices Image">
         <p class="noInvoicesBold">There is nothing here</p>
         <p class="noInvoicesText">Create an invoice by clicking the <span>New</span> button and get started</p>
     </div>  
 </div>
-
 
 <section id="newInvoiceOffCanvas" class="offCanvas">
     <article class="newInvoiceContent">

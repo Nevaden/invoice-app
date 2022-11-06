@@ -12,22 +12,19 @@ export const InvoicesReducer = createReducer(
 
     const invoiceState = {...state}
     const invoiceArray: Invoice[] = [];
-    // console.log(invoice, "add inovice success invoice response")
-    // console.log(state, 'state, succes s invoice')
+
     Object.keys(invoiceState).forEach((key: any) => {
       if(invoiceState[key].clientName){
-        // console.log(invoiceState[key].clientName,"what is client name")
+
         invoiceArray.push({ ...invoiceState[key]});
       }
     })
-    console.log(invoiceArray, "before push")
+    // console.log(invoiceArray, "before push")
     Object.values(invoice).forEach((data) => {
-      // console.log(invoiceArray[invoiceArray.length-1], "who am I?")
       invoiceArray[invoiceArray.length-1].firebaseId = data;
-      // console.log(invoiceArray[invoiceArray.length-1])
     })
     invoiceArray.push(invoice)
-    // console.log(invoiceArray, "array before return")
+
     return invoiceArray
   }),
 
@@ -37,6 +34,7 @@ export const InvoicesReducer = createReducer(
     // console.log(state, "current state on ADD")
     // console.log(payload, "current PLAYLOAD on ADD")
     Object.keys(invoiceState).forEach((key: any) => {
+      
       if(invoiceState[key].clientName){
         invoiceArray.push({ ...invoiceState[key]});
       }

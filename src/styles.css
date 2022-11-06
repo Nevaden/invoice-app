@@ -20,6 +20,7 @@ Body{
 
     --discardButtonBackgroundColor:#F9FAFE;
     --saveAsDraftColor: #888EB0;
+    --statusBackground: #FFFFFF;
 
 }
     
@@ -38,6 +39,7 @@ Body.DarkTheme{
     --addItemBackgroundColor: #252945;
     --discardButtonBackgroundColor:#252945;;
     --saveAsDraftColor:#DFE3FA;
+    --statusBackground: #252945;
 }   
 
 body{

@@ -17,6 +17,8 @@ import { DatePipe } from './pipes/date.pipe';
 import { environment } from '../environments/environment';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { StatusPipe } from './pipes/status.pipe';
+import { StopProagationDirective } from './directive/stop-propagation.directive';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     InvoicesComponent,
     ViewInvoiceComponent,
     NavBarComponent,
-    DatePipe
+    DatePipe,
+    StatusPipe,
+    StopProagationDirective
   ],
   imports: [
     BrowserModule,
